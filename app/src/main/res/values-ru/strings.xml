@@ -9,5 +9,5 @@
     <string name="version">Версия %s</string>
     <string name="about_card_description">Генератор Monet тем для Dashchan Разработал %s</string>
     <string name="source_code">Исходный код</string>
-    <string name="snackbar_message">Тема сохранена в %</string>
+    <string name="snackbar_message">Тема сохранена в %s</string>
 </resources>
