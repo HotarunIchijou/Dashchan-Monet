@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity() {
 
         // Source code link
         buttonSourceCode.setOnClickListener {
-            openLink(TODO("No github repo created yet"))
+            openLink("https://github.com/HotarunIchijou/Dashchan-Monet")
         }
 
     }
