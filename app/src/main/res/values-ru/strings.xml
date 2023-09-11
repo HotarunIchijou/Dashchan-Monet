@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Dashchan Monet</string>
+    <string name="light_theme">Светлая тема</string>
+    <string name="light_theme_description">Сгенерировать светлую тему для Dashchan из системных цветов</string>
+    <string name="dark_theme">Тёмная тема</string>
+    <string name="dark_theme_description">Сгенерировать тёмную тему для Dashchan из системных цветов</string>
+    <string name="export_text">Экспортировать</string>
+    <string name="version">Версия %s</string>
+    <string name="about_card_description">Генератор Monet тем для Dashchan Разработал %s</string>
+    <string name="source_code">Исходный код</string>
+    <string name="snackbar_message">Тема сохранена в %</string>
+</resources>
