@@ -11,9 +11,9 @@ android {
         applicationId = "org.hotarun.dashchan_monet"
         minSdk = 31
         targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
-        setProperty("archivesBaseName", "Dashchan_Monet_$versionName")
+        versionCode = 2
+        versionName = "1.1"
+        setProperty("archivesBaseName", "Dashchan-Monet-$versionName")
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -26,6 +26,7 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            signingConfig = signingConfigs.getByName("debug")
         }
     }
     compileOptions {
