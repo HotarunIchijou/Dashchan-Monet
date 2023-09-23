@@ -9,6 +9,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.SwitchCompat
 import androidx.core.content.ContextCompat
 import com.google.android.material.R.color
 import com.google.android.material.snackbar.Snackbar
@@ -37,21 +38,27 @@ class MainActivity : AppCompatActivity() {
         //Create Dashchan Light theme
         buttonExportLight.setOnClickListener {
             createTheme(baseFileName = "light_theme", generateLightTheme())
+
         }
 
         //Create Dashchan Dark theme
         buttonExportDark.setOnClickListener {
-            createTheme(baseFileName = "dark_theme", generateDarkTheme())
+            val isBlackChecked: SwitchCompat = findViewById(R.id.blackSwitch)
+            if (isBlackChecked.isChecked) {
+                createTheme(baseFileName = "black_theme", generateDarkTheme(true, "Monet black"))
+            } else {
+                createTheme(baseFileName = "dark_theme", generateDarkTheme(false, "Monet dark"))
+            }
         }
 
         // Source code link
         buttonSourceCode.setOnClickListener {
-            openLink("https://github.com/HotarunIchijou/Dashchan-Monet")
+            openLink()
         }
 
     }
 
-    private fun openLink(link: String) {
+    private fun openLink(link: String = "https://github.com/HotarunIchijou/Dashchan-Monet") {
         val i = Intent(Intent.ACTION_VIEW)
         i.data = Uri.parse(link)
         startActivity(i)
@@ -126,16 +133,25 @@ class MainActivity : AppCompatActivity() {
 
     @SuppressLint("PrivateResource")
     private fun generateDarkTheme(
-        themeMode: String = "dark",
-        themeName: String = "Monet dark"
+        isBlack: Boolean,
+        themeName: String,
+        themeMode: String = "dark"
     ): String {
 
-        val windowColor = Integer.toHexString(
+        val windowColor = if (isBlack) {
+            Integer.toHexString(
+                ContextCompat.getColor(
+                    this,
+                    color.m3_ref_palette_black
+                )
+            )
+        } else {Integer.toHexString(
             ContextCompat.getColor(
                 this,
                 color.m3_ref_palette_dynamic_neutral10
+                )
             )
-        )
+        }
 
         val accentColor = Integer.toHexString(
             ContextCompat.getColor(
