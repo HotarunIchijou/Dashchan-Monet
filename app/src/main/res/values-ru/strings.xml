@@ -6,6 +6,8 @@
     <string name="dark_theme">Тёмная тема</string>
     <string name="dark_theme_description">Сгенерировать тёмную тему для Dashchan из системных цветов</string>
     <string name="export_text">Экспортировать</string>
+    <string name="settings_card_title">Настройки</string>
+    <string name="settings_card_switch_black">Чёрная тема</string>
     <string name="version">Версия %s</string>
     <string name="about_card_description">Генератор Monet тем для Dashchan Разработал %s</string>
     <string name="source_code">Исходный код</string>
