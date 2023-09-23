@@ -11,6 +11,10 @@
     <string name="dark_theme_description">Generate Dark Theme for Dashchan from system colors.</string>
     <string name="export_text">Export</string>
 
+    <!-- Settings card -->
+    <string name="settings_card_title">Settings</string>
+    <string name="settings_card_switch_black">Pure black theme</string>
+
     <!-- About Card -->
     <string name="about_card_title" translatable="false">Dashchan Monet Theme</string>
     <string name="version">Version %s</string>
