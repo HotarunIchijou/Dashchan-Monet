@@ -14,6 +14,7 @@
     <!-- Settings card -->
     <string name="settings_card_title">Settings</string>
     <string name="settings_card_switch_black">Pure black theme</string>
+    <string name="settings_card_switch_black_summary">Replace background color with black</string>
 
     <!-- About Card -->
     <string name="about_card_title" translatable="false">Dashchan Monet Theme</string>
