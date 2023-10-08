@@ -38,23 +38,48 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_margin="8dp"
-                    android:fontFamily="@font/roboto_medium"
                     android:text="@string/settings_card_title"
+                    android:fontFamily="@font/roboto_medium"
                     android:textAppearance="?attr/textAppearanceTitleLarge"
                     android:textSize="18sp" />
 
             </LinearLayout>
 
-            <com.google.android.material.materialswitch.MaterialSwitch
-                android:id="@+id/blackSwitch"
-                style="@style/Widget.Material3.CompoundButton.MaterialSwitch"
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="end"
-                android:layout_margin="5dp"
-                android:fontFamily="@font/roboto_medium"
-                android:text="@string/settings_card_switch_black"
-                android:textSize="16sp" />
+                android:layout_height="wrap_content"
+                android:padding="8dp">
+            
+                <TextView
+                    android:id="@+id/blackTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_card_switch_black"
+                    android:textAppearance="?textAppearanceBodyLarge"
+                    app:layout_constraintBottom_toTopOf="@id/blackSummary"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/blackSummary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_card_switch_black_summary"
+                    android:textAppearance="?textAppearanceBodyMedium"
+                    android:textColor="?android:attr/textColorSecondary"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/blackTitle" />
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/blackSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>
 
