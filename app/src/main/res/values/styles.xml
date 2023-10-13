@@ -7,7 +7,10 @@
     </style>
 
     <!-- Card theme -->
-    <style name="DashchanMonet.Card" parent="Widget.Material3.CardView.Elevated" />
+    <style name="DashchanMonet.Card" parent="Widget.Material3.CardView.Elevated">
+        <item name="android:layout_marginHorizontal">12dp</item>
+        <item name="android:layout_marginVertical">4dp</item>
+    </style>
 
     <!-- Icon Card theme -->
     <style name="DashchanMonet.IconCard">
