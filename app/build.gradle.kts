@@ -11,11 +11,10 @@ android {
         applicationId = "org.hotarun.dashchan_monet"
         minSdk = 31
         targetSdk = 34
-        versionCode = 4
-        versionName = "1.1.1"
+        versionCode = 5
+        versionName = "2.0.0"
         setProperty("archivesBaseName", "Dashchan-Monet-$versionName")
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
 
