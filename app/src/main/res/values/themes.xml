@@ -7,7 +7,7 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <!-- Titile theme -->
+    <!-- Title theme -->
     <style name="DashchanMonet.Title" parent="@style/Widget.Material3.CollapsingToolbar.Large">
         <item name="fontFamily">@font/roboto_medium</item>
     </style>
