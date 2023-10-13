@@ -150,7 +150,7 @@ class MainActivity : AppCompatActivity() {
         } else {Integer.toHexString(
             ContextCompat.getColor(
                 this,
-                color.m3_ref_palette_dynamic_neutral10
+                color.m3_ref_palette_dynamic_neutral6
                 )
             )
         }
@@ -165,7 +165,7 @@ class MainActivity : AppCompatActivity() {
         val cardColor = Integer.toHexString(
             ContextCompat.getColor(
                 this,
-                R.color.system_neutral2_800
+                color.m3_ref_palette_dynamic_neutral12
             )
         )
         val quoteColor = Integer.toHexString(
