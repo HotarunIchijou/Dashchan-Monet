@@ -16,36 +16,34 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="15dp"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginVertical="16dp"
             android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:layout_marginHorizontal="8dp"
                 android:orientation="horizontal">
 
-                <Button
-                    style="@style/Widget.Material3.Button.IconButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:clickable="false"
-                    android:contentDescription="@string/about_card_description"
-                    android:drawableLeft="@drawable/info_24px"
-                    tools:ignore="RtlHardcoded" />
+                <ImageView
+                    style="@style/DashchanMonet.IconCard"
+                    android:duplicateParentState="true"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/info_24px" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_margin="8dp"
+                    android:layout_marginHorizontal="16dp"
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/description_title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
                         android:text="@string/about_card_title"
-                        android:fontFamily="@font/roboto_medium"
                         android:textAppearance="?attr/textAppearanceTitleLarge"
                         android:textSize="18sp" />
 
@@ -63,8 +61,9 @@
                 android:id="@+id/about_card_description"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:fontFamily="@font/roboto"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginHorizontal="12dp"
                 android:text="@string/about_card_description"
                 android:textAppearance="?attr/textAppearanceBodyMedium"
                 android:textColor="?android:attr/textColorSecondary" />
@@ -79,7 +78,8 @@
                     style="@style/DashchanMonet.Button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
+                    android:layout_marginHorizontal="12dp"
+                    android:layout_marginVertical="8dp"
                     app:icon="@drawable/code_24px"
                     android:text="@string/source_code" />
 
