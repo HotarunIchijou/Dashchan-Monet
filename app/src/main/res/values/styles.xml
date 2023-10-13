@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- Title theme -->
-    <style name="DashchanMonet.Title" parent="@style/Widget.Material3.CollapsingToolbar.Large">
-        <item name="fontFamily">@font/roboto_medium</item>
-    </style>
-
     <!-- Card theme -->
     <style name="DashchanMonet.Card" parent="Widget.Material3.CardView.Elevated">
         <item name="android:layout_marginHorizontal">12dp</item>
@@ -24,8 +19,6 @@
     </style>
 
     <!-- Button theme -->
-    <style name="DashchanMonet.Button" parent="@style/Widget.Material3.Button">
-        <item name="fontFamily">@font/roboto_medium</item>
-    </style>
+    <style name="DashchanMonet.Button" parent="@style/Widget.Material3.Button" />
 
 </resources>
