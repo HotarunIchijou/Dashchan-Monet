@@ -16,39 +16,40 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="15dp"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginVertical="16dp"
             android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:layout_marginHorizontal="8dp"
+                android:orientation="horizontal"
+                tools:ignore="UseCompoundDrawables">
 
-                <Button
-                    style="@style/Widget.Material3.Button.IconButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:clickable="false"
-                    android:contentDescription="@string/dark_theme_description"
-                    android:drawableLeft="@drawable/dark_mode_24px"
-                    tools:ignore="RtlHardcoded" />
+                <ImageView
+                    style="@style/DashchanMonet.IconCard"
+                    android:duplicateParentState="true"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/dark_mode_24px" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_margin="8dp"
-                    android:fontFamily="@font/roboto_medium"
+                    android:layout_marginHorizontal="16dp"
                     android:text="@string/dark_theme"
                     android:textAppearance="?attr/textAppearanceTitleLarge"
                     android:textSize="18sp" />
+
             </LinearLayout>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:fontFamily="@font/roboto"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginHorizontal="12dp"
                 android:text="@string/dark_theme_description"
                 android:textAppearance="?attr/textAppearanceBodyMedium"
                 android:textColor="?android:attr/textColorSecondary" />
@@ -63,7 +64,8 @@
                     style="@style/DashchanMonet.Button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
+                    android:layout_marginHorizontal="12dp"
+                    android:layout_marginVertical="8dp"
                     android:text="@string/export_text" />
 
             </LinearLayout>
