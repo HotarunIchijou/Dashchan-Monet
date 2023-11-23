@@ -12,9 +12,9 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:background">@drawable/ic_card_background</item>
-        <item name="android:tint">?colorOnPrimaryContainer</item>
+        <item name="android:tint">?colorOnSecondaryContainer</item>
         <item name="android:tintMode">src_in</item>
-        <item name="android:backgroundTint">?colorPrimaryContainer</item>
+        <item name="android:backgroundTint">?colorSecondaryContainer</item>
         <item name="android:backgroundTintMode">src_in</item>
     </style>
 
