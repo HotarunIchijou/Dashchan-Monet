@@ -11,8 +11,8 @@ android {
         applicationId = "org.hotarun.dashchan_monet"
         minSdk = 31
         targetSdk = 34
-        versionCode = 5
-        versionName = "2.1.0"
+        versionCode = 6
+        versionName = "2.1.1"
         setProperty("archivesBaseName", "Dashchan-Monet-$versionName")
 
     }
