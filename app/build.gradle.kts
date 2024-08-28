@@ -10,7 +10,7 @@ android {
     defaultConfig {
         applicationId = "org.hotarun.dashchan_monet"
         minSdk = 31
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 7
         versionName = "2.2.0"
         setProperty("archivesBaseName", "Dashchan-Monet-$versionName")
