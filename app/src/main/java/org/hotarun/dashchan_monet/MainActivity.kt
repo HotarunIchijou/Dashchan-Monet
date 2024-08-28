@@ -2,6 +2,7 @@ package org.hotarun.dashchan_monet
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.content.SharedPreferences
 import android.net.Uri
 import android.os.Bundle
 import android.os.Environment
@@ -25,7 +26,6 @@ class MainActivity : AppCompatActivity() {
         // Export Buttons
         val buttonExportLight: Button = findViewById(R.id.export_light_button)
         val buttonExportDark: Button = findViewById(R.id.export_dark_button)
-
         val version: TextView = findViewById(R.id.version)
         val versionName = packageManager.getPackageInfo(packageName, 0).versionName
         version.text = getString(R.string.version, versionName)
@@ -42,6 +42,8 @@ class MainActivity : AppCompatActivity() {
             createTheme(baseFileName = "light_theme", generateLightTheme())
 
         }
+
+		getData()
 
         //Create Dashchan Dark theme
         buttonExportDark.setOnClickListener {
@@ -65,6 +67,24 @@ class MainActivity : AppCompatActivity() {
         i.data = Uri.parse(link)
         startActivity(i)
     }
+
+	private fun saveData() {
+		val sharedPreferences: SharedPreferences =
+			getSharedPreferences("save", MODE_PRIVATE)
+		val sharedPreferencesEditor: SharedPreferences.Editor = sharedPreferences.edit()
+
+		val isBlack: SwitchCompat = findViewById(R.id.blackSwitch)
+		sharedPreferencesEditor.putBoolean("isBlack", isBlack.isChecked)
+		sharedPreferencesEditor.apply()
+	}
+
+	private fun getData() {
+		val sharedPreferences: SharedPreferences =
+			getSharedPreferences("save", MODE_PRIVATE)
+
+		val isBlack: SwitchCompat = findViewById(R.id.blackSwitch)
+		isBlack.isChecked = sharedPreferences.getBoolean("isBlack", isBlack.isChecked)
+	}
 
     private fun createTheme(
         baseFileName: String,
@@ -189,5 +209,10 @@ class MainActivity : AppCompatActivity() {
     private fun showSnackBar(view: View, message: String) {
         Snackbar.make(view, message, Snackbar.LENGTH_LONG).show()
     }
+
+	override fun onPause() {
+		super.onPause()
+		saveData()
+	}
 }
 
